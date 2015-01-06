@@ -146,6 +146,7 @@ set background=dark
 set t_Co=256
 colorscheme molokai " Molokai FTW!
 set cursorline      " Highlight current line
+set cc=80           " Draw 80 column line
 
 " -----------------------------------------------------------------------------
 " multiple windows
@@ -309,9 +310,6 @@ autocmd Filetype ruby,eruby,yaml setlocal ts=2 sts=2 sw=2
 autocmd BufWritePre *.py,*.rb,*.erb,*.json :call Preserve("%s/\\s\\+$//e")
 " autoformat specified files on save
 autocmd BufWritePre *.json :call Preserve("normal gg=G")
-
-" Draw 80 column line
-set cc=80
 
 " disable paste mode when leaving Insert Mode
 autocmd InsertLeave * set nopaste
