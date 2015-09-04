@@ -1,8 +1,4 @@
-" use Rubocop syntax checker for Ruby
-if executable('rubocop')
-  " let g:syntastic_ruby_checkers = ['rubocop']
-  let g:syntastic_ruby_checkers = ['']
-endif
-
-" disalbe foodcritic
-let g:loaded_syntastic_chef_foodcritic_checker = 0
+" Rubocop and foodcritic add a significant delay upon file save, hence both of
+" them should stay disabled
+let g:syntastic_ruby_checkers = ['mri']
+let g:loaded_syntastic_chef_foodcritic_checker= 0
