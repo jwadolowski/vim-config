@@ -110,6 +110,9 @@ Bundle 'ntpeters/vim-better-whitespace'
 " Bundle 'nathanaelkane/vim-indent-guides'
 " Bundle 'Yggdroot/indentLine'
 
+" Terraform syntax highlighting
+Bundle 'markcornick/vim-terraform'
+
 " Vim defaults everyone can agree
 "
 " WARNING - this bundle should be included as the last one
