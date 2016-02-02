@@ -18,7 +18,8 @@ Bundle 'gmarik/vundle'
 
 " vim look & feel plugins
 Bundle 'tomasr/molokai'
-Bundle 'bling/vim-airline'
+Bundle 'vim-airline/vim-airline'
+Bundle 'vim-airline/vim-airline-themes'
 
 " Text editing helper plugins
 " -------------------------
@@ -105,6 +106,9 @@ Bundle 'smerrill/vcl-vim-plugin'
 
 " Better whitespace highlighting
 Bundle 'ntpeters/vim-better-whitespace'
+
+" Go support
+Bundle 'fatih/vim-go'
 
 " Display indent levels in code
 " Bundle 'nathanaelkane/vim-indent-guides'
