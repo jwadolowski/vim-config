@@ -14,7 +14,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " Let Vundle manage Vundle
-Bundle 'gmarik/vundle'
+Bundle 'VundleVim/Vundle.vim'
 
 " vim look & feel plugins
 Bundle 'tomasr/molokai'
@@ -309,6 +309,11 @@ inoremap <C-@> <c-x><c-o>
 
 " disable f1
 nmap <F1> <nop>
+
+" get rid of mysterious ^[[>1;3409;0c
+augroup no_highlight
+  autocmd TermResponse * nnoremap <esc> :noh<return><esc>
+augroup END
 
 " -----------------------------------------------------------------------------
 " autocmds
