@@ -311,9 +311,7 @@ inoremap <C-@> <c-x><c-o>
 nmap <F1> <nop>
 
 " get rid of mysterious ^[[>1;3409;0c
-augroup no_highlight
-  autocmd TermResponse * nnoremap <esc> :noh<return><esc>
-augroup END
+" TODO
 
 " -----------------------------------------------------------------------------
 " autocmds
