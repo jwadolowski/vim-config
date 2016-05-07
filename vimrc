@@ -7,115 +7,116 @@
 " * vim-sensible is the latest bundle on the list
 " * syntastic bundle has been put before vim-signify
 
-set nocompatible              " be iMproved
-filetype off                  " required!
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " Let Vundle manage Vundle
-Bundle 'VundleVim/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 
 " vim look & feel plugins
-Bundle 'tomasr/molokai'
-Bundle 'vim-airline/vim-airline'
-Bundle 'vim-airline/vim-airline-themes'
+Plugin 'tomasr/molokai'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " Text editing helper plugins
 " -------------------------
 " Text object support (prerequisite for vim-textobj-rubyblock)
-Bundle 'kana/vim-textobj-user'
+Plugin 'kana/vim-textobj-user'
 " Improved dot key
-Bundle 'tpope/vim-repeat'
+Plugin 'tpope/vim-repeat'
 " Smart surroundings (brackets, quotes, etc)
-Bundle 'tpope/vim-surround'
+Plugin 'tpope/vim-surround'
 " Useful mapping pairs
-Bundle 'tpope/vim-unimpaired'
+Plugin 'tpope/vim-unimpaired'
 " Visual search improvements
-Bundle 'nelstrom/vim-visual-star-search'
+Plugin 'nelstrom/vim-visual-star-search'
 " Smart tab completion
-Bundle 'ervandew/supertab'
+Plugin 'ervandew/supertab'
 " Wisely add 'end' in Ruby/BASH/etc
-Bundle 'tpope/vim-endwise'
+Plugin 'tpope/vim-endwise'
 " Text alignment
-Bundle 'godlygeek/tabular'
+Plugin 'godlygeek/tabular'
 " Text folding improvments
-Bundle 'HarnoRanaivo/vim-neatfoldtext'
+Plugin 'HarnoRanaivo/vim-neatfoldtext'
 
 " Comment plugin
-Bundle 'tpope/vim-commentary'
+Plugin 'tpope/vim-commentary'
 
 " Really cool and useful file finder
-Bundle 'kien/ctrlp.vim'
+Plugin 'kien/ctrlp.vim'
 
 " Shell/OS integration plugins
-Bundle 'tpope/vim-dispatch'
+Plugin 'tpope/vim-dispatch'
 
 " better ack, C vs Perl
 if executable('ag')
-  Bundle 'rking/ag.vim'
+  Plugin 'rking/ag.vim'
 endif
 
 " Show differences for recovered files
-Bundle 'chrisbra/Recover.vim'
+Plugin 'chrisbra/Recover.vim'
 
 " Snipmate & dependecies + snippets
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'tomtom/tlib_vim'
-Bundle 'garbas/vim-snipmate'
-Bundle 'honza/vim-snippets'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
 
 " Faster YAML processing
-" Bundle 'avakhov/vim-yaml'
-Bundle 'ingydotnet/yaml-vim'
+" Plugin 'avakhov/vim-yaml'
+Plugin 'ingydotnet/yaml-vim'
 
 " Ruby block selection
-Bundle 'nelstrom/vim-textobj-rubyblock'
+Plugin 'nelstrom/vim-textobj-rubyblock'
 " Generic Ruby helpers for vim users
-Bundle 'vim-ruby/vim-ruby'
+Plugin 'vim-ruby/vim-ruby'
 
 " Chef plugin
-Bundle 'dougireton/vim-chef'
+Plugin 'dougireton/vim-chef'
 
 " JSON plugin
-Bundle 'elzr/vim-json'
+Plugin 'elzr/vim-json'
 
 " Markdown plugin
-Bundle 'tpope/vim-markdown'
+Plugin 'tpope/vim-markdown'
 
 " Syntax checker
-Bundle 'scrooloose/syntastic'
+Plugin 'scrooloose/syntastic'
 
 " Syntax, indent and filetype detection for Git files
-Bundle 'tpope/vim-git'
+Plugin 'tpope/vim-git'
 " Git wrapper for vim
-Bundle 'tpope/vim-fugitive'
+Plugin 'tpope/vim-fugitive'
 " Git repository viewer for vim
-Bundle 'gregsexton/gitv'
+Plugin 'gregsexton/gitv'
 " Show a VCS diff using Vim's sign column
-Bundle 'mhinz/vim-signify'
+Plugin 'mhinz/vim-signify'
 
 " Nice tree explorer for vim
-Bundle 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdtree'
 
 " Auto-completion for quotes, brackets, etc.
-Bundle 'Raimondi/delimitMate'
+Plugin 'Raimondi/delimitMate'
 
 " VCL syntax highlightning
-Bundle 'smerrill/vcl-vim-plugin'
+Plugin 'smerrill/vcl-vim-plugin'
 
 " Better whitespace highlighting
-Bundle 'ntpeters/vim-better-whitespace'
+Plugin 'ntpeters/vim-better-whitespace'
 
 " Go support
-Bundle 'fatih/vim-go'
+Plugin 'fatih/vim-go'
 
 " Display indent levels in code
-" Bundle 'nathanaelkane/vim-indent-guides'
-" Bundle 'Yggdroot/indentLine'
+" Plugin 'nathanaelkane/vim-indent-guides'
+" Plugin 'Yggdroot/indentLine'
 
 " Terraform syntax highlighting
-Bundle 'markcornick/vim-terraform'
+Plugin 'hashivim/vim-terraform'
 
 " Vim defaults everyone can agree
 "
@@ -124,7 +125,11 @@ Bundle 'markcornick/vim-terraform'
 " * enables syntax
 " * turns on file decetions
 " * status bar (powerline)
-Bundle 'tpope/vim-sensible'
+Plugin 'tpope/vim-sensible'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 " -----------------------------------------------------------------------------
 " moving around, searching and patterns
