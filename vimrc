@@ -115,8 +115,11 @@ Plugin 'fatih/vim-go'
 " Plugin 'nathanaelkane/vim-indent-guides'
 " Plugin 'Yggdroot/indentLine'
 
-" Terraform syntax highlighting
+" HashiCorp tools
+Plugin 'hashivim/vim-consul'
+Plugin 'hashivim/vim-packer'
 Plugin 'hashivim/vim-terraform'
+Plugin 'hashivim/vim-vagrant'
 
 " Vim defaults everyone can agree
 "
