@@ -324,8 +324,9 @@ nmap <F1> <nop>
 " -----------------------------------------------------------------------------
 " autocmds
 " -----------------------------------------------------------------------------
-" set correct indentation level for ruby files
+" set correct indentation level
 autocmd Filetype ruby,eruby,yaml setlocal ts=2 sts=2 sw=2
+autocmd Filetype terraform setlocal ts=2 sts=2 sw=2
 
 " get rid of whitespaces on save from specified files
 autocmd BufWritePre *.py,*.rb,*.erb,*.json :call Preserve("%s/\\s\\+$//e")
