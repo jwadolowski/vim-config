@@ -284,6 +284,9 @@ set encoding=utf8
 " -----------------------------------------------------------------------------
 " various
 " -----------------------------------------------------------------------------
+" scrolling fix in iterm2
+set mouse=nicr
+
 " toogle NerdTree
 map <F2> :NERDTreeToggle<CR>
 
