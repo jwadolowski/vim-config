@@ -341,3 +341,7 @@ autocmd InsertLeave * set nopaste
 
 " Limit syntax highlighting for ruby files
 autocmd FileType ruby,ruby.chef,eruby,eruby.chef set synmaxcol=80
+
+" Jenkinsfiles
+au BufReadPost Jenkinsfile set syntax=groovy
+au BufReadPost Jenkinsfile set filetype=groovy
