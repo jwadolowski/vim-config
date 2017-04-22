@@ -174,6 +174,8 @@ map <Leader>v :vsp<CR>
 map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
+" Ctrl-H doesn't work in NeoVim by default, see:
+" https://github.com/neovim/neovim/issues/2048#issuecomment-98307896
 map <c-h> <c-w>h
 
 " -----------------------------------------------------------------------------
@@ -282,7 +284,7 @@ set wildmenu                   " enable command line completion
 set encoding=utf8
 
 " -----------------------------------------------------------------------------
-" various
+" misc
 " -----------------------------------------------------------------------------
 " scrolling fix in iterm2
 set mouse=nicr
