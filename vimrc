@@ -128,7 +128,9 @@ Plugin 'hashivim/vim-vagrant'
 " * enables syntax
 " * turns on file decetions
 " * status bar (powerline)
-Plugin 'tpope/vim-sensible'
+if !has('nvim')
+  Plugin 'tpope/vim-sensible'
+end
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -323,8 +325,10 @@ inoremap <C-@> <c-x><c-o>
 " disable f1
 nmap <F1> <nop>
 
-" get rid of mysterious ^[[>1;3409;0c
-" TODO
+" Disable python & ruby providers
+let g:loaded_python_provider = 1
+let g:loaded_python3_provider = 1
+let g:loaded_ruby_provider = 1
 
 " -----------------------------------------------------------------------------
 " autocmds
@@ -346,4 +350,3 @@ autocmd FileType ruby,ruby.chef,eruby,eruby.chef set synmaxcol=80
 
 " Jenkinsfiles
 au BufReadPost Jenkinsfile set syntax=groovy
-au BufReadPost Jenkinsfile set filetype=groovy
