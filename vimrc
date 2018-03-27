@@ -19,6 +19,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 " vim look & feel plugins
 Plugin 'tomasr/molokai'
+Plugin 'ayu-theme/ayu-vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
@@ -161,9 +162,11 @@ set number          " always display line numbers
 syntax on
 set background=dark
 set t_Co=256
-colorscheme molokai " Molokai FTW!
 set cursorline      " Highlight current line
 set cc=80           " Draw 80 column line
+set termguicolors
+let ayucolor="dark"
+colorscheme ayu
 
 " -----------------------------------------------------------------------------
 " multiple windows
