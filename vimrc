@@ -83,7 +83,7 @@ Plugin 'dougireton/vim-chef'
 Plugin 'elzr/vim-json'
 
 " Markdown plugin
-Plugin 'tpope/vim-markdown'
+" Plugin 'tpope/vim-markdown'
 
 " Syntax checker
 Plugin 'scrooloose/syntastic'
@@ -132,6 +132,9 @@ Plugin 'hashivim/vim-vagrant'
 if !has('nvim')
   Plugin 'tpope/vim-sensible'
 end
+
+" A collection of language packs for Vim
+Plugin 'sheerun/vim-polyglot'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
