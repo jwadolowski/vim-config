@@ -83,7 +83,7 @@ Plugin 'dougireton/vim-chef'
 Plugin 'elzr/vim-json'
 
 " Markdown plugin
-" Plugin 'tpope/vim-markdown'
+Plugin 'tpope/vim-markdown'
 
 " Syntax checker
 Plugin 'scrooloose/syntastic'
@@ -134,7 +134,7 @@ if !has('nvim')
 end
 
 " A collection of language packs for Vim
-Plugin 'sheerun/vim-polyglot'
+" Plugin 'sheerun/vim-polyglot'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -313,6 +313,11 @@ nmap <leader>l :set list!<CR>
 " replace default characters with a nicer one
 set listchars=tab:»\ ,eol:¬
 
+" Fix for non-visible end line characters in ayu theme
+"
+" https://github.com/ayu-theme/ayu-vim/issues/18
+hi NonText ctermfg=7 guifg=gray
+
 " map sort function to a key
 vnoremap <Leader>s :sort<CR>
 
@@ -352,7 +357,7 @@ autocmd BufWritePre *.json :call Preserve("normal gg=G")
 autocmd InsertLeave * set nopaste
 
 " Limit syntax highlighting for ruby files
-autocmd FileType ruby,ruby.chef,eruby,eruby.chef set synmaxcol=80
+" autocmd FileType ruby,ruby.chef,eruby,eruby.chef set synmaxcol=80
 
 " Jenkinsfiles
 au BufReadPost Jenkinsfile set syntax=groovy
