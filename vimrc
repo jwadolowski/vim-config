@@ -122,6 +122,9 @@ Plugin 'hashivim/vim-packer'
 Plugin 'hashivim/vim-terraform'
 Plugin 'hashivim/vim-vagrant'
 
+" Vim alignment plugin
+Plugin 'junegunn/vim-easy-align'
+
 " Vim defaults everyone can agree
 "
 " WARNING - this bundle should be included as the last one
@@ -166,7 +169,7 @@ syntax on
 set background=dark
 set t_Co=256
 set cursorline      " Highlight current line
-set cc=80           " Draw 80 column line
+set cc=81           " Draw 81 column line
 set termguicolors
 let ayucolor="dark"
 colorscheme ayu
@@ -297,6 +300,9 @@ set encoding=utf8
 " scrolling fix in iterm2
 set mouse=nicr
 
+" https://stackoverflow.com/a/16114535/6802186
+set nofixendofline
+
 " toogle NerdTree
 map <F2> :NERDTreeToggle<CR>
 
@@ -355,6 +361,12 @@ autocmd BufWritePre *.json :call Preserve("normal gg=G")
 
 " disable paste mode when leaving Insert Mode
 autocmd InsertLeave * set nopaste
+
+" Align GitHub-flavored Markdown tables
+au FileType markdown vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>
+
+" Increase max number of charactes in each line for Markdown files
+au FileType markdown setlocal textwidth=120 colorcolumn=+1
 
 " Limit syntax highlighting for ruby files
 " autocmd FileType ruby,ruby.chef,eruby,eruby.chef set synmaxcol=80
