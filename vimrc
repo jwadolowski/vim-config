@@ -146,7 +146,7 @@ filetype plugin indent on    " required
 " -----------------------------------------------------------------------------
 " moving around, searching and patterns
 " -----------------------------------------------------------------------------
-set nostartofline " keep cursor in same column for long-range motion cmds"
+set nostartofline " keep cursor in same column for long-range motion cmds
 set hlsearch      " highlight all matches for the last used search pattern
 set incsearch     " show match for partly typed search command
 set ignorecase    " ignore case when using a search pattern
