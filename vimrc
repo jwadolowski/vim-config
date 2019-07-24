@@ -125,6 +125,9 @@ Plugin 'hashivim/vim-vagrant'
 " Vim alignment plugin
 Plugin 'junegunn/vim-easy-align'
 
+" A plugin to color colornames and codes
+Plugin 'chrisbra/Colorizer'
+
 " Vim defaults everyone can agree
 "
 " WARNING - this bundle should be included as the last one
